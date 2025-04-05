@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pioneer Leaders in AI (PLAIR) | UMass Amherst</title>
+  <title>Pioneer Leaders in AI and Robotics (PLAIR) | UMass Amherst</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -52,7 +52,7 @@
           <div class="column">
               <!-- Added Manning CICS logo right under the text -->
               <img src="cics.png" alt="Manning CICS Logo" style="max-height: 50px; margin-top: 1rem;" />
-            <h1 class="title is-2 has-text-white">Pioneer Leaders in AI (PLAIR)</h1>
+            <h1 class="title is-2 has-text-white">Pioneer Leaders in AI and Robotics (PLAIR)</h1>
             <p class="subtitle is-5 has-text-white is-italic">
               An Initiative For Western Mass High School Students in STEM
             </p>
@@ -65,7 +65,14 @@
   <!-- Navigation -->
   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container">
-      <div class="navbar-menu is-active">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasic" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="#about">About</a>
           <a class="navbar-item" href="#goals">Goals</a>
@@ -95,7 +102,7 @@
             <h2 class="title is-4 border-bottom-umass section-title">About the Initiative</h2>
             <div class="content">
               <p class="is-size-5">
-                Pioneer Leaders in AI (PLAIR) is a pilot outreach program initiated by faculty from the Manning College of Information and Computer Sciences at UMass Amherst designed to address the challenges of a shrinking high school population in Massachusetts. 
+                Pioneer Leaders in AI and Robotics (PLAIR) is a pilot outreach program initiated by faculty from the Manning College of Information and Computer Sciences at UMass Amherst designed to address the challenges of a shrinking high school population in Massachusetts. 
               </p>
               <p class="is-size-5">
                 By connecting cutting-edge research in Artificial Intelligence and Robotics with high school education in Western Mass, we aim to inspire young minds through hands-on research opportunities and academic mentorship. Our initiative leverages the expertise of CICS researchers and graduate student mentors to create a dynamic pipeline for future STEM leaders while fostering lasting community partnerships.
@@ -242,7 +249,7 @@
       <div class="columns">
         <div class="column is-one-half">
           <h3 class="is-size-4 mb-3 has-text-weight-semibold has-text-umass">PLAIR</h3>
-          <p>Pioneer Leaders in AI (PLAIR) is an initiative by faculty from the Manning College of Information and Computer Sciences at UMass Amherst.</p>
+          <p>Pioneer Leaders in AI and Robotics (PLAIR) is an initiative by faculty from the Manning College of Information and Computer Sciences at UMass Amherst.</p>
         </div>
         <div class="column is-one-half">
           <h3 class="is-size-5 mb-3 has-text-weight-semibold">Quick Links</h3>
@@ -264,11 +271,31 @@
         </div> -->
       </div>
       <div class="has-text-centered mt-5 pt-5 copyright-text">
-        <p>&copy; 2025 Pioneer Leaders in AI (PLAIR). All rights
+        <p>&copy; 2025 Pioneer Leaders in AI and Robotics (PLAIR). All rights
         reserved. Developed with Anthropic Claude.</p>
         <p>Organized by Donghyun Kim and Eugene Bagdasarian, Assistant Professors at the Manning College of Information and Computer Sciences, UMass Amherst.</p>
       </div>
     </div>
   </footer>
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>

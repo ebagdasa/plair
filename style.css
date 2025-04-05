@@ -329,6 +329,40 @@ ul li::before {
   .hero .subtitle {
     font-size: 1.1rem !important;
   }
+  
+  /* Mobile navbar styling */
+  .navbar-burger {
+    color: var(--umass-red);
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  
+  .navbar-burger:hover {
+    background-color: rgba(136, 28, 28, 0.05);
+  }
+  
+  .navbar-burger.is-active {
+    color: var(--umass-dark-red);
+  }
+  
+  .navbar-menu.is-active {
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    max-height: calc(100vh - 3.25rem);
+    overflow-y: auto;
+  }
+  
+  .navbar-menu.is-active .navbar-item {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .navbar-menu.is-active .navbar-item:last-child {
+    border-bottom: none;
+  }
+  
+  .organizer-card {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Animation for boxes */
