@@ -12,15 +12,29 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
   <!-- Added external CSS -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="plair.png" type="image/png" />
 </head>
 <body>
-  <header class="has-text-centered p-3" style="background-color: #f5f5f5;">
-    <h1 class="title">Pioneer Leaders in AI (PLAIR)</h1>
-    <p class="subtitle">An Initiative by Faculty from the Manning College of Information and Computer Sciences at UMass Amherst</p>
+  <!-- <header class="has-text-centered p-3" style="background-color: #f5f5f5;"> -->
+    <!-- <h1 class="title">Pioneer Leaders in AI (PLAIR)</h1> -->
+    <!-- <p class="subtitle">An Initiative by Faculty from the Manning College of Information and Computer Sciences at UMass Amherst</p> -->
     <!-- Removed Manning CICS logo from here -->
-  </header>
+  <!-- </header> -->
   <div class="umass-header-bottom"></div>
 
   <!-- Short Hero with Larger PLAIR Logo -->
@@ -29,36 +43,70 @@
       <div class="container">
         <div class="columns is-vcentered">
           <!-- Logo Column -->
-          <div class="column is-narrow">
-            <!-- Update 'plair.png' to your actual file path -->
+          <!-- <div class="column is-narrow">
             <figure class="image plair-logo">
               <img src="plair.png" alt="PLAIR Logo" />
             </figure>
-          </div>
+          </div> -->
           <!-- Text Column -->
           <div class="column">
+              <!-- Added Manning CICS logo right under the text -->
+              <img src="cics.png" alt="Manning CICS Logo" style="max-height: 50px; margin-top: 1rem;" />
             <h1 class="title is-2 has-text-white">Pioneer Leaders in AI (PLAIR)</h1>
             <p class="subtitle is-5 has-text-white is-italic">
               An Initiative For Western Mass High School Students in STEM
             </p>
-            <!-- Added Manning CICS logo right under the text -->
-            <img src="Manning_CICS-horiz-WEB.jpg" alt="Manning CICS Logo" style="max-height: 50px; margin-top: 1rem;" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Navigation -->
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-menu is-active">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#about">About</a>
+          <a class="navbar-item" href="#goals">Goals</a>
+          <a class="navbar-item" href="#program-structure">Program</a>
+          <a class="navbar-item" href="#outcomes">Outcomes</a>
+          <a class="navbar-item" href="#organizers">Organizers</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a href="mailto:info@umass.edu" class="button is-danger is-small">
+              <span class="icon"><i class="fas fa-envelope"></i></span>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- Main Content -->
   <section class="section">
     <div class="container">
       <!-- About section -->
-      <div class="box mb-5">
-        <h2 class="title is-4 border-bottom-umass section-title" id="about">About the Initiative</h2>
-        <div class="content">
-          <p class="is-size-5">
-            Pioneer Leaders in AI (PLAIR) is a pilot outreach program initiated by faculty from the Manning College of Information and Computer Sciences at UMass Amherst designed to address the challenges of a shrinking high school population in Massachusetts. By connecting cutting-edge research in Artificial Intelligence and Robotics with high school education in Western Mass, we aim to inspire young minds through hands-on research opportunities and academic mentorship. Our initiative leverages the expertise of CICS researchers and graduate student mentors to create a dynamic pipeline for future STEM leaders while fostering lasting community partnerships.
-          </p>
+      <div class="box mb-5" id="about">
+        <div class="columns is-vcentered">
+          <div class="column is-8">
+            <h2 class="title is-4 border-bottom-umass section-title">About the Initiative</h2>
+            <div class="content">
+              <p class="is-size-5">
+                Pioneer Leaders in AI (PLAIR) is a pilot outreach program initiated by faculty from the Manning College of Information and Computer Sciences at UMass Amherst designed to address the challenges of a shrinking high school population in Massachusetts. 
+              </p>
+              <p class="is-size-5">
+                By connecting cutting-edge research in Artificial Intelligence and Robotics with high school education in Western Mass, we aim to inspire young minds through hands-on research opportunities and academic mentorship. Our initiative leverages the expertise of CICS researchers and graduate student mentors to create a dynamic pipeline for future STEM leaders while fostering lasting community partnerships.
+              </p>
+            </div>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <div class="feature-image">
+              <img src="plair.png" alt="PLAIR Logo" class="about-image">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -86,12 +134,47 @@
       </div>
 
       <!-- Program Structure section -->
-      <div class="box mb-5">
-        <h2 class="title is-4 border-bottom-umass section-title" id="program-structure">Program Structure</h2>
+      <div class="box mb-5" id="program-structure">
+        <h2 class="title is-4 border-bottom-umass section-title">Program Structure</h2>
         <div class="content">
-          <p class="is-size-5">
-            The program begins with an engaging introductory lecture at participating high schools, followed by a competitive student selection process. Selected teams then work on collaborative research projects, culminating in a showcase event organized by CICS Professors.
-          </p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker is-umass">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline-content">
+                <p class="heading">Phase 1</p>
+                <p class="is-size-5">Engaging introductory lecture at participating high schools</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker is-umass">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="timeline-content">
+                <p class="heading">Phase 2</p>
+                <p class="is-size-5">Competitive student selection process</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker is-umass">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="timeline-content">
+                <p class="heading">Phase 3</p>
+                <p class="is-size-5">Selected teams work on collaborative research projects</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker is-umass">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="timeline-content">
+                <p class="heading">Phase 4</p>
+                <p class="is-size-5">Showcase event organized by CICS Professors</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -113,13 +196,25 @@
         <h2 class="title is-4 border-bottom-umass section-title" id="organizers">Organizers</h2>
         <div class="content">
           <div class="columns">
-            <div class="column is-half">
-               <p><strong>Donghyun Kim</strong><br>
-               Assistant Professor, Manning CICS</p>
+            <div class="column is-half organizer-card">
+              <div class="card">
+                <div class="card-content">
+                  <div>
+                    <div class="organizer-name"><a href="https://dhkim0821.github.io/" target="_blank" class="organizer-link">Donghyun Kim</a></div>
+                    <div class="organizer-title">Assistant Professor, Manning CICS</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="column is-half">
-               <p><strong>Eugene Bagdasarian</strong><br>
-               Assistant Professor, Manning CICS</p>
+            <div class="column is-half organizer-card">
+              <div class="card">
+                <div class="card-content">
+                  <div>
+                    <div class="organizer-name"><a href="https://people.cs.umass.edu/~eugene/" target="_blank" class="organizer-link">Eugene Bagdasarian</a></div>
+                    <div class="organizer-title">Assistant Professor, Manning CICS</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -128,18 +223,51 @@
       <!-- CTA section -->
       <div class="notification has-bg-umass has-text-white has-text-centered p-5">
         <p class="is-size-5 mb-3">Interested in learning more or joining our initiative?</p>
-        <a href="mailto:info@umass.edu" class="button is-white is-outlined is-medium">
-          <span class="icon"><i class="fas fa-envelope"></i></span>
-          <span>Contact Us Today</span>
-        </a>
+        <div class="buttons is-centered">
+          <a href="mailto:eugene@cs.umass.edu,donghyunkim@cs.umass.edu" class="button is-white is-outlined is-medium">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span>Contact Us Today</span>
+          </a>
+          <!-- <a href="#" class="button is-light is-medium">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span>Learn More</span>
+          </a> -->
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer has-background-light">
-    <div class="content has-text-centered">
-      <p>&copy; 2025 Pioneer Leaders in AI (PLAIR). All rights reserved.</p>
-      <p>Organized by Donghyun Kim and Eugene Bagdasarian, Assistant Professors at the Manning College of Information and Computer Sciences, UMass Amherst.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-half">
+          <h3 class="is-size-4 mb-3 has-text-weight-semibold has-text-umass">PLAIR</h3>
+          <p>Pioneer Leaders in AI (PLAIR) is an initiative by faculty from the Manning College of Information and Computer Sciences at UMass Amherst.</p>
+        </div>
+        <div class="column is-one-half">
+          <h3 class="is-size-5 mb-3 has-text-weight-semibold">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About the Initiative</a></li>
+            <li><a href="#goals">Our Goals</a></li>
+            <li><a href="#outcomes">Outcomes & Impact</a></li>
+          </ul>
+        </div>
+        <!-- <div class="column is-one-third">
+          <h3 class="is-size-5 mb-3 has-text-weight-semibold">Contact</h3>
+          <p><i class="fas fa-envelope has-text-umass mr-2"></i>info@umass.edu</p>
+          <p><i class="fas fa-map-marker-alt has-text-umass mr-2"></i> Manning CICS, UMass Amherst</p>
+          <div class="social-icons mt-3">
+            <a href="#" class="mr-2"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="mr-2"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="mr-2"><i class="fab fa-github fa-lg"></i></a>
+          </div>
+        </div> -->
+      </div>
+      <div class="has-text-centered mt-5 pt-5 copyright-text">
+        <p>&copy; 2025 Pioneer Leaders in AI (PLAIR). All rights
+        reserved. Developed with Anthropic Claude.</p>
+        <p>Organized by Donghyun Kim and Eugene Bagdasarian, Assistant Professors at the Manning College of Information and Computer Sciences, UMass Amherst.</p>
+      </div>
     </div>
   </footer>
 </body>
