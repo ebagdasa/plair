@@ -363,6 +363,32 @@ ul li::before {
   .organizer-card {
     margin-bottom: 1rem;
   }
+  
+  /* Reorder content in About section on mobile */
+  #about .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #about .column.is-4 {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  #about .column.is-8 {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #about .column.is-8 .section-title {
+    order: 2;
+    margin-top: 1rem;
+  }
+  
+  #about .column.is-8 .content {
+    order: 3;
+  }
 }
 
 /* Animation for boxes */
