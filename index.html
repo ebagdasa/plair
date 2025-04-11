@@ -83,10 +83,10 @@
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
-            <a href="mailto:donghyunkim@cs.umass.edu" class="button is-danger is-small">
+            <button onclick="copyToClipboard('donghyunkim@cs.umass.edu,eugene@umass.edu')" class="button is-danger is-small">
               <span class="icon"><i class="fas fa-envelope"></i></span>
               <span>Contact</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -271,10 +271,10 @@
       <div class="notification has-bg-umass has-text-white has-text-centered p-5">
         <p class="is-size-5 mb-3">Interested in learning more or joining our initiative?</p>
         <div class="buttons is-centered">
-          <a href="mailto:donghyunkim@cs.umass.edu" class="button is-white is-outlined is-medium">
+          <button onclick="copyToClipboard('donghyunkim@cs.umass.edu,eugene@umass.edu')" class="button is-white is-outlined is-medium">
             <span class="icon"><i class="fas fa-envelope"></i></span>
-            <span>Email: donghyunkim@cs.umass.edu</span>
-          </a>
+            <span>Email Us</span>
+          </button>
           <!-- <a href="#" class="button is-light is-medium">
             <span class="icon"><i class="fas fa-info-circle"></i></span>
             <span>Learn More</span>
@@ -318,7 +318,7 @@
       </div>
     </div>
   </footer>
-  <!-- JavaScript for mobile menu toggle -->
+  <!-- JavaScript for mobile menu toggle and clipboard functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Get all "navbar-burger" elements
@@ -337,6 +337,40 @@
         });
       });
     });
+    
+    // Function to copy text to clipboard
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        // Create notification
+        showNotification('Email copied to clipboard!');
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+    }
+    
+    // Function to show notification
+    function showNotification(message) {
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.className = 'copy-notification is-size-6';
+      notification.textContent = message;
+      
+      // Add it to the body
+      document.body.appendChild(notification);
+      
+      // Trigger animation
+      setTimeout(() => {
+        notification.classList.add('show');
+      }, 10);
+      
+      // Remove after animation completes
+      setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 500);
+      }, 2000);
+    }
   </script>
 </body>
 </html>
